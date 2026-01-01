@@ -44,9 +44,7 @@ app.use("/api/stats", statsRoutes);
 app.use(express.static(path.join(__dirname, "dist")));
 
 // ⚠️ BẮT BUỘC DÙNG REGEX
-app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
+
 
 // Start server
 const PORT = process.env.PORT || 3000;
